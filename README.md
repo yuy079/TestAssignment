@@ -10,8 +10,10 @@ My name is Yue Yu and I'm more interested in project "Standalone IntelliJ inspec
 
 AST:
 * /src/main/scala/AST.scala
+
 Parser:
 * /src/main/scala/Parser.scala
+
 Evaluate and simplify BooleanExpression:
 * /src/main/scala/ExpressionEvaluation.scala
 
