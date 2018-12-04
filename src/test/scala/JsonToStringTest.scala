@@ -4,18 +4,18 @@ import org.scalatest.FunSuite
 
 class JsonToStringTest extends FunSuite {
 
-  test("testJsonToString") {
-    val s = JObject(
-      JField("Not",
-        JObject(
-          JField(
-            "Not",
-            JString("True")
-          )
-        )
-      )
-    )
-    println(Parser.jsonToString(s))
+  test("Simple boolean") {
+    //True
+    val json = JObject(JField("Boolean", JBool(true)))
+    val str = pretty(render(json))
+    assert(Parser.jsonToString(json)== str)
+
+  }
+  test("Simple variable") {
+    //Variable("a")
+    val json = JObject(List(JField("Variable", JString("a"))))
+    val str = pretty(render(json))
+    assert(Parser.jsonToString(json)== str)
 
   }
 
